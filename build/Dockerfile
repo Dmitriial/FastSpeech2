@@ -9,5 +9,10 @@ WORKDIR /app/
 COPY . /app/
 
 RUN apt update \
-    && apt install -y python3.9 python3-pip \
+    && apt install -y python3.9 python3.9-venv \
+    && mkdir /envs/ \
+    && cd /envs/ \
+    && python3.9 -m venv .venv \
+    && cd /app/ \
+    && source /envs/.venv/bin/activate \
     && pip install -r requirments.txt
