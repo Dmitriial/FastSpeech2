@@ -1,0 +1,23 @@
+# **/ - prefix for searching anywhere
+# all linux hidden files and directories which start from dot
+**/.*
+# standard envs directories
+**/env
+**/venv
+# assets folders and caches
+**/assets
+**/*_cache
+# server cache root folders
+**/fixtures
+# compiled python directories
+**/__pycache__
+# demo notebooks
+**/*.ipynb
+# exclude papers and documentation
+**/*.pdf
+**/*.djvu
+**/*.md
+# docker wrappers
+**/Dockerfile*
+**/docker-compose.*
+**/debug*

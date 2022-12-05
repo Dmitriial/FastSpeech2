@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  fast-speech-2:
+    build:
+        context: .
+        dockerfile: ./build/Dockerfile
+    tty: true
+    command: "/bin/bash"
+    volumes:
+      - .:/app/
